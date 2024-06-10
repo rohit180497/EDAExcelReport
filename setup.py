@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="EDA_report",  
+    name="eda-excel-report",  
     version="0.1.0",  
     author="Rohit Kosamkar",
     author_email="rohitkosamkar97@gmail.com",
@@ -20,7 +20,7 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        "pandas",  # Add other dependencies as needed
+        "pandas",  
         "openpyxl",
         "numpy",
         "scikit-learn",

@@ -1,6 +1,6 @@
-# EDA_report
+# eda-excel-report
 
-EDA_report is a Python package for generating detailed exploratory data analysis (EDA) reports specifically for datasets with binary target variables. The package creates comprehensive EDA reports in Excel format, which include statistics and visualizations in the form of table that help in understanding the distribution and relationship of various features with the target variable.
+eda-excel-report is a Python package for generating detailed exploratory data analysis (EDA) reports specifically for datasets with binary target variables. The package creates comprehensive EDA reports in Excel format, which include statistics and visualizations in the form of table that help in understanding the distribution and relationship of various features with the target variable.
 
 ## Features
 
@@ -15,4 +15,4 @@ EDA_report is a Python package for generating detailed exploratory data analysis
 You can install the package via pip:
 
 ```sh
-pip install EDA_report
+pip install eda-excel-report
