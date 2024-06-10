@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import datetime
 from sys import maxsize
 from openpyxl.formatting.rule import ColorScaleRule
 from openpyxl import Workbook, load_workbook
@@ -12,7 +12,9 @@ class EDA_Formatter:
     def __init__(self, path= "..\\reports\\EDA_raw.xlsx", model_type= "Target", conditional_color ="red"):
         
         self.input_path = path
-        self.output_path = "_formatted.xlsx".join(path.split(".xlsx"))
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        self.output_path = f"_{timestamp}.xlsx".join(path.split(".xlsx"))
         self.type = model_type
         self.color = conditional_color
         self.r = 1

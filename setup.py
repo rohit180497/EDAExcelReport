@@ -23,6 +23,7 @@ setup(
         "pandas",  # Add other dependencies as needed
         "openpyxl",
         "numpy",
-        "scikit-learn"
+        "scikit-learn",
+        "datetime"
     ],
 )
