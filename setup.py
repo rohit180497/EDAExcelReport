@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="eda-excel-report",  
+    name="EDAExcelReport",  
     version="0.1.0",  
     author="Rohit Kosamkar",
     author_email="rohitkosamkar97@gmail.com",
     description="A package for generating EDA reports",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rohit180497/EDA_report",  
+    url="https://github.com/rohit180497/eda-excel-report",  
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -1,14 +1,14 @@
 import pandas as pd
 import numpy as np
 import os
-from eda_report.eda_format import EDA_Formatter 
+from ed_report.eda_format import EDA_Formatter 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 
 from sklearn.model_selection import StratifiedKFold
 from sklearn import metrics
 
-class EDAReport():
+class EDAExcelReport():
 
     def __init__(self, data, target, report_path, ignore_cols= None, cat_label_enco_thresh= 0.05, num_min_samples_leaf = 0.1, conditional_color: str = 'red' ):
         grp_data = self._get_full_eda(
