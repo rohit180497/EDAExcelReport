@@ -14,13 +14,14 @@ EDAExcelReport is a Python package for generating detailed exploratory data anal
 
 You can install the package via pip:
 
-``bash
+```sh
 pip install EDAExcelReport      
 
 
 ## Usage
 
 ### Importing the package
+
 
 from EDAR.excel_report import EDAExcelReport
 
