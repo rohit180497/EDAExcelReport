@@ -88,6 +88,9 @@ EDAExcelReport(df, 'target',r'tests\test_eda_report.xlsx', ignore_cols= ignore_f
     
     <ed_report.excel_report.EDAExcelReport at 0x188c09ee9f0>
 
-```python
+### Exploratory Data Analysis Excel File for above Credit Data you can download from here: 
 
-```
+[Download Excel File](https://github.com/rohit180497/EDAExcelReport/blob/main/tests/test_eda_report_20240610_153828.xlsx)
+
+
+
