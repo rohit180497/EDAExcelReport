@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setup(
     name="EDAExcelReport",  
-    version="0.1.0",  
+    version="0.1.1",  
     author="Rohit Kosamkar",
     author_email="rohitkosamkar97@gmail.com",
     description="A package for generating EDA reports",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rohit180497/eda-excel-report",  
+    url="https://github.com/rohit180497/EDAExcelReport",  
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
