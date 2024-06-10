@@ -14,31 +14,8 @@ EDAExcelReport is a Python package for generating detailed exploratory data anal
 
 You can install the package via pip:
 
-```sh
-pip install EDAExcelReport      
+```bash
+pip install EDAExcelReport     
 
 
-## Usage
-
-### Importing the package
-
-
-from EDAR.excel_report import EDAExcelReport
-
-### Example Usage
-
-Import necessary libraries
-import pandas as pd
-import numpy as np
-import os
-
-# Import EDAExcelReport
-from EDAR.excel_report import EDAExcelReport
-
-# Loading the credit dataset
-df = pd.read_csv(r"tests\credit_data.csv")
-df.columns
-df.isna().sum()
-ignore_feats = ["ID", "OCCUPATION_TYPE", "DAYS_BIRTH", "DAYS_EMPLOYED", "FLAG_MOBIL"]
-EDAExcelReport(df, 'target', r'tests\test_eda_report.xlsx', ignore_cols=ignore_feats)
 
