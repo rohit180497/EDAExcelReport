@@ -11,7 +11,7 @@ setup(
     description="A package for generating EDA reports",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/EDA_report",  
+    url="https://github.com/rohit180497/EDA_report",  
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

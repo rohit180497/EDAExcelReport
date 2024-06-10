@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-from EDA_report.eda_report.eda_format import EDA_Formatter 
+from eda_report.eda_format import EDA_Formatter 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 
