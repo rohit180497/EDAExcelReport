@@ -68,7 +68,7 @@ class EDAExcelReport():
 
                 grp_df = pd.DataFrame(X, columns= [col])
                 grp_df[col] = grp_df[col].replace(x_map)
-                grp_df['target'] = y
+                grp_df[target] = y
 
                 grp_df = grp_df.groupby(col)[target].agg(
                 ['count', 'sum', 'mean']).reset_index()

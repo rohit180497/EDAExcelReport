@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="EDAExcelReport",  
-    version="0.1.2",  
+    version="0.1.4",  
     author="Rohit Kosamkar",
     author_email="rohitkosamkar97@gmail.com",
     description="A package for generating EDA reports",
