@@ -92,5 +92,21 @@ EDAExcelReport(df, 'target',r'tests\test_eda_report.xlsx', ignore_cols= ignore_f
 
 [Download Excel File](https://github.com/rohit180497/EDAExcelReport/blob/main/tests/test_eda_report_20240610_153828.xlsx)
 
+## Screenshots
 
+### Screenshot 1
+![Screenshot 1](images/Snapshot_of_EDA_excel_report1.png)
+
+### Screenshot 2
+![Screenshot 2](images/Snapshot_of_EDA_excel_report2.png)
+
+### Screenshot 3
+![Screenshot 1](images/Snapshot_of_EDA_excel_report3.png)
+
+### Screenshot 4
+![Screenshot 2](images/Snapshot_of_EDA_excel_roc_report.png)
+
+## License
+
+This project is licensed under the MIT License.
 
