@@ -1,11 +1,21 @@
 from setuptools import setup, find_packages
 
+# List of contributors
+contributors = [
+    "Rohit Kosamkar <rohitkosamkar97@gmail.com>",
+    "Viraj Pai",
+    "KP"
+    
+]
+
+
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="EDAExcelReport",  
-    version="0.1.5",  
+    version="0.1.6",  
     author="Rohit Kosamkar",
     author_email="rohitkosamkar97@gmail.com",
     description="A package for generating EDA reports",
@@ -34,4 +44,8 @@ setup(
         "scikit-learn",
         "datetime"
     ],
+
+     metadata={
+        "contributors": ", ".join(contributors)
+    }
 )
