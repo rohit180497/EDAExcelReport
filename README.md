@@ -140,16 +140,17 @@ class EDAExcelReport:
 ## Screenshots
 
 ### Screenshot 1
-![Screenshot 1](images/Snapshot_of_EDA_excel_report1.png)
+![Screenshot 1](https://github.com/rohit180497/EDAExcelReport/blob/main/images/Snapshot_of_EDA_excel_report1.png?raw=true)
 
 ### Screenshot 2
-![Screenshot 2](images/Snapshot_of_EDA_excel_report2.png)
+![Screenshot 2](https://github.com/rohit180497/EDAExcelReport/blob/main/images/Snapshot_of_EDA_excel_report2.png?raw=true)
 
 ### Screenshot 3
-![Screenshot 1](images/Snapshot_of_EDA_excel_report3.png)
+![Screenshot 3](https://github.com/rohit180497/EDAExcelReport/blob/main/images/Snapshot_of_EDA_excel_report3.png?raw=true)
 
 ### Screenshot 4
-![Screenshot 2](images/Snapshot_of_EDA_excel_roc_report.png)
+![Screenshot 4](https://github.com/rohit180497/EDAExcelReport/blob/main/images/Snapshot_of_EDA_excel_roc_report.png?raw=true)
+
 
 ## License
 
