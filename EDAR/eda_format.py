@@ -10,7 +10,24 @@ from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
 class EDA_Formatter:
   
     def __init__(self, path= "..\\reports\\EDA_raw.xlsx", model_type= "Target", conditional_color ="red"):
-        
+
+
+        """
+        A class to format and generate an Excel report for EDA results with conditional formatting.
+
+        Parameters
+        ----------
+        path : str, optional
+            The path to the raw EDA Excel report (default is "..\\reports\\EDA_raw.xlsx").
+        model_type : str, optional
+            The type of model used for generating the EDA (default is "Target").
+        conditional_color : str, optional
+            The color used for conditional formatting in the report (default is "red").
+        """
+
+        """
+        Initializes the EDA_Formatter with the given parameters and runs the formatter.
+        """
         self.input_path = path
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
@@ -24,6 +41,10 @@ class EDA_Formatter:
         self.run_formatter()
 
     def setup_workbook(self):
+
+        """
+        Sets up the workbook by loading the initial sheet and setting column widths.
+        """
         self.wb = Workbook()
         ws2 = load_workbook(self.input_path)['ROC Report']
         ws2._parent = self.wb
@@ -33,7 +54,9 @@ class EDA_Formatter:
         self.set_column_widths()
 
     def run_formatter(self):
-
+        """
+        Runs the formatter to process and format the EDA results.
+        """
         df = pd.read_excel(self.input_path, "Detailed EDA", engine = "openpyxl")
         df.rename(columns = {"value": "Value",
                              "count": "Frequency",
@@ -68,6 +91,20 @@ class EDA_Formatter:
 
     @staticmethod
     def is_number(n):
+
+        """
+        Checks if the given value is a number.
+
+        Parameters
+        ----------
+        n : Any
+            The value to check.
+
+        Returns
+        -------
+        bool
+            True if the value is a number, False otherwise.
+        """
         try:
             float(n)
         except ValueError:
@@ -76,6 +113,19 @@ class EDA_Formatter:
     
     @staticmethod
     def sort(df):
+        """
+        Sorts the DataFrame by the 'Value' column.
+
+        Parameters
+        ----------
+        df : pd.DataFrame
+            The DataFrame to sort.
+
+        Returns
+        -------
+        pd.DataFrame
+            The sorted DataFrame.
+        """
 
         df["Value"] = df["Value"].apply(pd.to_numeric)
         df.sort_values(by = "Value", inplace=True)
@@ -84,14 +134,27 @@ class EDA_Formatter:
         return df
 
     def set_column_widths(self):
+        """
+        Sets the column widths for the worksheet.
+        """
          
-         width_list = [43, 50, 10, 15, 10, 14, 19, 11]
+        width_list = [43, 50, 10, 15, 10, 14, 19, 11]
 
-         for index, width in enumerate(width_list):
-             char = get_column_letter(index+self.c)
-             self.ws.column_dimensions[char].width = (width+0.78)
+        for index, width in enumerate(width_list):
+            char = get_column_letter(index+self.c)
+            self.ws.column_dimensions[char].width = (width+0.78)
 
     def number_format(self, df_rows):
+
+        """
+        Formats numeric values in the worksheet cells.
+
+        Parameters
+        ----------
+        df_rows : int
+            The number of rows in the DataFrame.
+        """
+
         char = get_column_letter(self.c+1)
 
         prev_cell = self.ws[char + str(self.r)]
@@ -113,6 +176,18 @@ class EDA_Formatter:
 
 
     def df_formatter(self, rows, cols):
+
+        """
+        Applies formatting to the DataFrame cells in the worksheet.
+
+        Parameters
+        ----------
+        rows : int
+            The number of rows in the DataFrame.
+        cols : int
+            The number of columns in the DataFrame.
+        """
+
 
         thin_border = Border(left=Side(border_style='thin'),
                              right=Side(border_style='thin'),
@@ -159,7 +234,7 @@ class EDA_Formatter:
         self.ws.merge_cells(char+str(self.r+1)+':'+char+str(self.r+rows))
 
     def cond_format(self, start_row, end_row, start_col, end_col):
-
+        """Apply conditional formatting to the worksheet."""
 
         if (self.color == 'red' or self.color == 'Red'):
             high_value = 'F8696B'
@@ -183,6 +258,9 @@ class EDA_Formatter:
                 
 
     def write_to_excel(self, df):
+        
+        """Write the DataFrame to the worksheet and apply formatting."""
+
         num_flag = False
 
         thin_border = Border(bottom=Side(style='thin'))
