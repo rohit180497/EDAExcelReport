@@ -1,3 +1,17 @@
+In this `README.md`, I have included the following sections:
+- Features
+- Installation
+- Usage
+- Important Note about handling null values
+- Input Parameters with descriptions
+- Example Usage
+- Screenshots
+- License
+
+Additionally, I've provided an example showing how to remove or impute null values before generating the EDA report. This ensures users understand the importance of handling null values in their datasets.
+
+
+
 # EDAExcelReport
 
 EDAExcelReport is a Python package for generating detailed exploratory data analysis (EDA) reports specifically for datasets with binary target variables. The package creates comprehensive EDA reports in Excel format, which include statistics and visualizations in the form of table that help in understanding the distribution and relationship of various features with the target variable.
@@ -88,6 +102,37 @@ EDAExcelReport(df, 'target',r'tests\test_eda_report.xlsx', ignore_cols= ignore_f
     
     <ed_report.excel_report.EDAExcelReport at 0x188c09ee9f0>
 
+
+## Important Note 
+
+Ensure your dataset is free of null values before using the EDAExcelReport package. This is crucial because numeric data is bucketed during the analysis, and the presence of null values can interfere with the bucket creation process. Additionally, having null values in the dataset can lead to inaccurate or misleading results when showcasing the report to stakeholders.
+
+### Example
+
+```python
+# Remove or impute null values
+df.fillna(method='ffill', inplace=True)
+```
+
+## Input Parameters
+
+### EDAExcelReport
+
+```python
+
+class EDAExcelReport:
+    def __init__(self, data, target, report_path, ignore_cols=None, cat_label_enco_thresh=0.05, num_min_samples_leaf=0.1, conditional_color='red'):
+
+
+`data:` The input DataFrame containing the dataset.
+`target:` The name of the target column in the DataFrame.
+`report_path:` The file path where the Excel report will be saved.
+`ignore_cols:` (Optional) List of column names to ignore in the analysis.
+`cat_label_enco_thresh:` (Optional) Threshold for label encoding of categorical variables (default is 0.05).
+`num_min_samples_leaf:` (Optional) Minimum samples per leaf for numeric data bucketing (default is 0.1).
+`conditional_color:` (Optional) The color used for conditional formatting in the report (default is 'red').
+
+```
 ### Exploratory Data Analysis Excel File for above Credit Data you can download from here: 
 
 [Download Excel File](https://github.com/rohit180497/EDAExcelReport/blob/main/tests/test_eda_report_20240610_153828.xlsx)
