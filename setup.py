@@ -15,7 +15,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="EDAExcelReport",  
-    version="0.1.6",  
+    version="0.1.7",  
     author="Rohit Kosamkar",
     author_email="rohitkosamkar97@gmail.com",
     description="A package for generating EDA reports",
@@ -45,7 +45,10 @@ setup(
         "datetime"
     ],
 
-     metadata={
-        "contributors": ", ".join(contributors)
+    entry_points={
+        "console_scripts": [
+            "eda_contributors=EDAExcelReport.contributors:set_contributors"
+        ]
     }
+
 )
