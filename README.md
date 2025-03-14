@@ -1,20 +1,20 @@
-In this `README.md`, I have included the following sections:
-- Features
-- Installation
-- Usage
-- Important Note about handling null values
-- Input Parameters with descriptions
-- Example Usage
-- Screenshots
-- License
-
-Additionally, I've provided an example showing how to remove or impute null values before generating the EDA report. This ensures users understand the importance of handling null values in their datasets.
-
-
-
 # EDAExcelReport
 
+![PyPI](https://img.shields.io/pypi/v/EDAExcelReport?color=blue&label=PyPI) ![Python](https://img.shields.io/badge/Python-3.6%2B-blue.svg) ![License](https://img.shields.io/badge/License-MIT-green.svg) ![Downloads](https://img.shields.io/pypi/dm/EDAExcelReport?color=orange&label=Downloads) ![Issues](https://img.shields.io/github/issues/rohit180497/EDAExcelReport) ![EDA](https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-yellow.svg) ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ML-red.svg) ![Statistics](https://img.shields.io/badge/Statistics-Data%20Science-purple.svg)
+
+
 EDAExcelReport is a Python package for generating detailed exploratory data analysis (EDA) reports specifically for datasets with binary target variables. The package creates comprehensive EDA reports in Excel format, which include statistics and visualizations in the form of table that help in understanding the distribution and relationship of various features with the target variable.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Important Note](#important-note)
+- [Input Parameters](#input-parameters)
+- [Example Usage](#example-usage)
+- [Screenshots](#screenshots)
+- [License](#license)
+
 
 ## Features
 
