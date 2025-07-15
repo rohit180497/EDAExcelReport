@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 # List of contributors
 contributors = [
-    "Rohit Kosamkar <rohitkosamkar97@gmail.com>"
+    "Rohit Kosamkar <rohitkosamkar97@gmail.com>",
     "Sapna Chavan <chavansapna12@gmail.com>"
 ]
 
@@ -11,9 +11,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="EDAExcelReport",  
-    version="0.2.0",  
-    author="Rohit Kosamkar",
-    author_email="rohitkosamkar97@gmail.com",
+    version="0.2.1",  
+    author="Rohit Kosamkar, Sapna Chavan",
+    author_email="rohitkosamkar97@gmail.com, chavansapna12@gmail.com",
     description="A Python package for generating detailed EDA reports in Excel format with structured insights and visualizations.",
     long_description=long_description,
     long_description_content_type="text/markdown",
